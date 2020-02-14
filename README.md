@@ -1,2 +1,4 @@
 # flir2fmv
 Convert radiometric FLIR video (*.seq) to ESRI FMV-compatible video
+
+This script converts *.seq* files created by a radiometric FLIR camera, such as the FLIR Duo Pro R or Vue Pro R, into ESRI-compatible video viles matched with telemetry data. The program requires at least one folder containing *.seq* files from a single flight, along with the Ardupilot flight log. Currently, the dataflash (*.bin*) file must be converted to *.gpx* prior to processing, however automated conversion is in progress. The program will then convert each video clip and trim the telemetry data to match the clip. The telemetry is output as a *.csv* file that can be used directly in ESRI FMV for multiplexing. *Multiplexer.py* can the be run (in the ArcGIS python console) to multiple the video and telemetry into MISB-compliant clips.
